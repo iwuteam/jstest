@@ -5,41 +5,9 @@
 Что с этим всем делать?
 Результат каждого задания - код, который нужно отправить нам, скинув ссылку на repo/gist на Github в наш Телеграм [@iwu_skill_test_bot](http://t.me/iwu_skill_test_bot)
 
-### Задача 1
+### Задача
 
 Реализовать функцию, создающую глубокую копию (deep copy) объекта без использования JSON.stringify
-
-
-### Рефакторинг
-
-```
-function drawRating(vote) {
-	if (vote >= 0 && vote <= 20) {
-    	return '★☆☆☆☆';
-	}
-	else if (vote > 20 && vote <= 40) {
-		return '★★☆☆☆';
-	}
-	else if (vote > 40 && vote <= 60) {
-		return '★★★☆☆';
-	}
-	else if (vote > 60 && vote <= 80) {
-		return '★★★★☆';
-	}
-	else if (vote > 80 && vote <= 100) {
-		return '★★★★★';
-	}
-}
-
-// Проверка работы результата
-console.log(drawRating(0) ); // ★☆☆☆☆
-console.log(drawRating(1) ); // ★☆☆☆☆
-console.log(drawRating(50)); // ★★★☆☆
-console.log(drawRating(99)); // ★★★★★
-```
-- Что можно улучшить?
-- Как бы вы переписали функцию drawRating при условии что на вход функции drawRating должна приходить переменная vote, содержащая значение от 0 до 100?
-
 
 ### Рефакторинг
 
@@ -82,3 +50,18 @@ function func(s, a, b) {
 }
 ```
 - Как бы вы переписали этот код?
+
+### Практика
+Разработать компонент Country Suggest: компонент подсказки названия страны с флагами
+
+![Пример](https://s3.amazonaws.com/awesomescreenshot/upload//670176/3f925373-c954-4311-66e4-04d5aa282577.png?AWSAccessKeyId=AKIAJSCJQ2NM3XLFPVKA&Expires=1536600669&Signature=ykq5fFrdTZS7EwlLaozzx4FYLgE%3D)
+
+- Для тестовой реализации использовать API https://restcountries.eu/#api-endpoints-name
+- Компонент должен быть переиспользуемым, то есть не завязанным на конкретный API. Конфигурация должна включать как минимум: 
+  - apiURL: string 
+  - flagField: string | function(resp) Коллбек позволяет указать их какого поля ответа получать изображение с флагом
+- Реализация клавиатурных событий - стрелок вверх-вниз - на ваше усмотрение
+- Вы можете использовать свой любимый фрейворк(React, VueJS, etc) или Vanilla JS - на ваше усмотрение
+- Проект должен иметь все необходимое для работы в репозитории, включая Readme с документацией по сборке и пример использования
+
+
