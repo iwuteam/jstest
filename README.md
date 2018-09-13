@@ -75,7 +75,7 @@ function func(s, a, b) {
 ### 4. Практическая задача
 Разработать компонент Country Suggest: компонент подсказки названия страны с флагами
 
-![Пример](https://s3.amazonaws.com/awesomescreenshot/upload//670176/3f925373-c954-4311-66e4-04d5aa282577.png?AWSAccessKeyId=AKIAJSCJQ2NM3XLFPVKA&Expires=1536600669&Signature=ykq5fFrdTZS7EwlLaozzx4FYLgE%3D)
+![Пример](flag-suggest.png)
 
 - Для тестовой реализации использовать API https://restcountries.eu/#api-endpoints-name
 - Компонент должен быть переиспользуемым, то есть не завязанным на конкретный API. Конфигурация должна включать как минимум: 
